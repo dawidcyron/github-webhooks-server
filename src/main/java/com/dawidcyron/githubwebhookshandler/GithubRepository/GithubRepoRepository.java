@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface GithubRepoRepository extends CrudRepository<GithubRepository, Long> {
-	List<GithubRepository> findTop10ByOrderById();
+  List<GithubRepository> findTop6ByOrderById();
 }

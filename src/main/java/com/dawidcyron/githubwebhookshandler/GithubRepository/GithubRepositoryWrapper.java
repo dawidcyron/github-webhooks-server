@@ -1,10 +1,10 @@
 package com.dawidcyron.githubwebhookshandler.GithubRepository;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
-import javax.persistence.Entity;
-
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GithubRepositoryWrapper {
-	private GithubRepository repository;
+  private GithubRepository repository;
 }
