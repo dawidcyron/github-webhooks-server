@@ -1,25 +1,34 @@
 package com.dawidcyron.githubwebhookshandler.GithubRepository;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.URL;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.net.URL;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
 public class GithubRepository {
 
 	@Id
+	@NotNull
+	@Column(nullable = false)
 	private Long id;
 
-	private URL url;
+	@NotNull
+	@URL
+	@Column(nullable = false)
+	private String html_url;
 
+	@NotNull
+	@NotEmpty
+	@Column(nullable = false)
 	private String name;
 
 	private String description;
 
-	private  String language;
-
-	private Integer stargazers;
+	private String language;
 }
