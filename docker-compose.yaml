@@ -1,0 +1,32 @@
+version: '3'
+networks:
+  app:
+    driver: overlay
+services:
+  web:
+    image: "dawidcyron/github-webhooks-handler:1.0.0"
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      MYSQL_DATABASE_URL: jdbc:mysql://mysql:3306/github?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      MYSQL_DATABASE_USER: app
+      MYSQL_DATABASE_PASSWORD: yw!424%dsgerq
+      PORT: 80
+      SECRET: FD83f23BdsDS12fdac
+    networks:
+      - app
+    restart: on-failure
+    volumes:
+      - ./logs:/var/log/github-repo.log
+  mysql:
+    image: "mariadb:latest"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - ./volumes/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: github
+      MYSQL_ROOT_PASSWORD: ierKJFD823^32#
+    networks:
+      - app
+    restart: on-failure
