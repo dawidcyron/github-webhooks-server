@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.dawidcyron</groupId>
     <artifactId>github-webhooks-handler</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
     <name>github-webhooks-handler</name>
     <description>Simple application for handling github webhook events and saving repositories to local database.
     </description>
