@@ -35,6 +35,7 @@ public class GithubRepositoryController {
     }
   }
 
+  @CrossOrigin(origins = "https://dawidcyron.me")
   @GetMapping("/")
   public ResponseEntity<List<GithubRepository>> getSixRecentRepositories() {
     return new ResponseEntity<>(githubRepoRepository.findTop6ByOrderById(), HttpStatus.OK);
