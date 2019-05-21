@@ -1,8 +1,8 @@
 <p align="middle"><img src="https://cdn.worldvectorlogo.com/logos/webhooks.svg" alt="Logo" width="200px"><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="Github" width="200px"></p>
 
-<h1 style="text-align: center">GitHub Webhooks Handler</h1>
+<h1 style="text-align: center" align="middle">GitHub Webhooks Handler</h1>
 
-<h4 style="text-align: center">Simple HTTP server for saving GitHub webhooks payload to local database.</h4><br>
+<h4 style="text-align: center" align="middle">Simple HTTP server for saving GitHub webhooks payload to local database.</h4><br>
 
 #### This application was created to provide repository list for my portfolio website https://dawidcyron.me.
 

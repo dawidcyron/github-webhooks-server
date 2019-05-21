@@ -1,6 +1,7 @@
 package com.dawidcyron.githubwebhookshandler.GithubRepository;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import org.hibernate.validator.constraints.URL;
 
@@ -13,6 +14,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class GithubRepository {
 
   @Id
@@ -33,4 +35,6 @@ public class GithubRepository {
   private String description;
 
   private String language;
+
+  private String live_url;
 }
